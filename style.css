@@ -1,0 +1,93 @@
+:root {
+    --personal-bg: linear-gradient(135deg, #FF9a9e 0%, #Fecfef 100%);
+    --work-bg: linear-gradient(135deg, #A1c4fd 0%, #C2e9fb 100%);
+    --education-bg: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    --finance-bg: linear-gradient(135deg, #Fccb90 0%, #D57eeb 100%);
+    --shopping-bg: linear-gradient(135deg, #E0c3fc 0%, #8ec5fc 100%);
+    --primary-btn: #667eea;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 375px; height: 750px;
+    background: white; border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    overflow-y: auto; position: relative;
+}
+
+.hidden { display: none; }
+
+/* Login */
+.login-content {
+    padding: 50px 30px; text-align: center;
+    display: flex; flex-direction: column; height: 100%; justify-content: center;
+}
+
+.logo-circle {
+    width: 80px; height: 80px; background: var(--primary-btn);
+    color: white; border-radius: 50%; margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center; font-size: 30px;
+}
+
+input[type="text"] {
+    width: 100%; padding: 15px; border-radius: 15px;
+    border: 2px solid #eee; margin: 20px 0; outline: none;
+}
+
+button {
+    background: var(--primary-btn); color: white;
+    border: none; padding: 15px; border-radius: 15px;
+    cursor: pointer; font-weight: 600;
+}
+
+/* Header Dashboard */
+.main-header {
+    background: #667eea; color: white; padding: 40px 25px;
+    border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+/* Kategori */
+.category-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px;
+}
+
+.cat-card {
+    padding: 20px; border-radius: 20px; cursor: pointer;
+    transition: 0.3s; color: #444;
+}
+
+.cat-card:hover { transform: scale(1.05); }
+.cat-card.personal { background: var(--personal-bg); }
+.cat-card.work { background: var(--work-bg); }
+.cat-card.education { background: var(--education-bg); }
+.cat-card.finance { background: var(--finance-bg); }
+.cat-card.shopping { background: var(--shopping-bg); }
+
+/* Task List */
+.list-header { padding: 40px 20px; color: white; }
+.btn-icon { background: rgba(255,255,255,0.2); border-radius: 10px; width: 40px; margin-bottom: 10px;}
+
+.task-input-section { padding: 0 20px; display: flex; gap: 10px; margin-top: -25px; }
+.task-input-section input { margin: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+#task-list { padding: 20px; list-style: none; }
+.task-item {
+    background: #fff; padding: 15px; border-radius: 15px;
+    margin-bottom: 10px; display: flex; align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.task-item.done span { text-decoration: line-through; color: #ccc; }
+
+.delete-btn { color: #ff5e5e; margin-left: auto; cursor: pointer; }
